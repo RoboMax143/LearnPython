@@ -1,20 +1,37 @@
 def bread(func):
-    pass
+    def wrapper():
+        result = func()
+        return f"Bread\n{result}Bread"
+    return wrapper
 
 def salat(func):
-    pass
+    def wrapper():
+        result = func()
+        return f"Salat\n{result}"
+    return wrapper
 
 def tomato(func):
-    pass
+    def wrapper():
+        result = func()
+        return f"Tomato\n{result}"
+    return wrapper
 
 def meat(func):
-    pass
+    def wrapper():
+        result = func()
+        return f"Meat\n{result}"
+    return wrapper
 
+@bread
+@salat
+@tomato
+@meat
 def make_sandwich():
-    return ''
+    return ""
 
 def main():
-    make_sandwich()
+    result = make_sandwich()
+    print(result)
 
 if __name__ == '__main__':
     main()
