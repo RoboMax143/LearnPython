@@ -12,7 +12,7 @@ def cache(filename='cache.json', key_type='positional'):
                 f.close()
                 cache_dict.clear()
                 cache_dict.update(loaded)
-            except (FileNotFoundError, json.JSONDecodeError):
+            except:
                 pass
 
         def save_cache():
